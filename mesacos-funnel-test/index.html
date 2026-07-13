@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mesacos testisivu - Ruusujuurimaailma</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="Sivuston yläpalkki">
+      <a class="brand" href="#top" aria-label="Mesacos testiversio">
+        <span class="brand-logo">
+          <img src="./assets/mesacos-logo-transparent.png" alt="Ruusujuurimaailma - Mesacos Oy" />
+        </span>
+        <span>
+          <strong>Mesacos</strong>
+          <small>Ruusujuurimaailma</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Päänavigaatio">
+        <a href="#why">Ruusujuuri</a>
+        <a href="#finder">Valitse tuote</a>
+        <a href="#products">Tuotteet</a>
+        <a href="#delivery">Toimitus</a>
+      </nav>
+      <button class="cart-button" type="button" aria-label="Avaa ostoskori" data-open-cart>
+        <span aria-hidden="true">Kori</span>
+        <strong data-cart-count>0</strong>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img src="./assets/mesacos-hero-original.jpg" alt="Ruusujuuren kukkia Mesacosin nykyiseltä sivustolta" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Mesacos Oy / Ruusujuurimaailma</p>
+          <h1 id="hero-title">Pohjois-Pohjanmaalla viljeltyä ruusujuurta.</h1>
+          <p class="hero-copy">
+            Ruusujuurituotteita, marjajauheita, uutteita ja voiteita omasta verkkokaupasta. Tämä testisivu kokoaa nykyisen Mesacos-sisällön selkeämmäksi ostajan poluksi.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#finder">Etsi sopiva tuote</a>
+            <a class="button secondary" href="#products">Katso tuotteet</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="evidence-strip" aria-label="Luottamussignaalit">
+        <div>
+          <strong>Viljely Pohjois-Pohjanmaalla</strong>
+          <span>Ruusujuuri viljellään syrjäisellä tilalla kemikaalivapaasti.</span>
+        </div>
+        <div>
+          <strong>Ei laktoosia eikä viljoja</strong>
+          <span>Ruusujuurituotteet sisältävät puhdasta kokojuurijauhetta.</span>
+        </div>
+        <div>
+          <strong>Toimitus 2-6 arkipäivässä</strong>
+          <span>Yli 60 euron tilaukset toimitetaan ilman toimituskuluja.</span>
+        </div>
+      </section>
+
+      <section class="section intro" id="why" aria-labelledby="why-title">
+        <div class="section-heading">
+          <p class="eyebrow">Mikä ruusujuuri on?</p>
+          <h2 id="why-title">Ruusujuuri on pohjoisten ja vuoristoisten alueiden kasvi, jonka juurakko tuoksuu halkaistuna ruusulle.</h2>
+        </div>
+        <div class="intro-grid">
+          <article>
+            <img src="./assets/ruusujuuri-root.jpg" alt="Ruusujuuren juurakkoa esitteillä" />
+            <h3>Perinne ja tutkimus</h3>
+            <p>
+              Ruusujuurta on käytetty vuosisatojen ajan ankarissa luonnonoloissa selviytymisen tukena. Mesacosin sivusto kertoo tieteellisen kiinnostuksen alkaneen entisessä Neuvostoliitossa 1960-luvulla.
+            </p>
+          </article>
+          <article>
+            <img src="./assets/product-rodistrong-vegi.png" alt="RodiStrong Vegi -tuotepakkaus" />
+            <h3>Kokojuurijauhe</h3>
+            <p>
+              Ravintolisiin käytetään ruusujuuren maanalainen osa. Tuotteissa käytetään kokojuurijauhetta eli juurakkoa ja hajajuurta ilman lisäaineita.
+            </p>
+          </article>
+          <article>
+            <img src="./assets/product-ruusujuuriuute.jpg" alt="Ruusujuuriuute-pullo" />
+            <h3>Useita käyttötapoja</h3>
+            <p>
+              Valikoimassa on kapseleita, ruusujuuri-nokkostuotteita, ruusujuuriuutetta, marjajauheita sekä ruusujuurivoiteita ulkoiseen käyttöön.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section finder" id="finder" aria-labelledby="finder-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Tuotevalitsin</p>
+          <h2 id="finder-title">Aloita käyttötavan mukaan.</h2>
+          <p>Nykyinen valikoima on laaja. Testiversio auttaa uutta kävijää etenemään muutaman selkeän valinnan kautta.</p>
+        </div>
+        <div class="segment-grid" role="list">
+          <button class="segment is-active" type="button" data-segment="shift" role="listitem">
+            <span>Vahvempi kapseli</span>
+            <strong>Haluan 220 mg ruusujuurijauhetta kapselissa.</strong>
+          </button>
+          <button class="segment" type="button" data-segment="study" role="listitem">
+            <span>Miedompi kapseli</span>
+            <strong>Haluan pienemmän 110 mg kapselin pitkäaikaiseen käyttöön.</strong>
+          </button>
+          <button class="segment" type="button" data-segment="senior" role="listitem">
+            <span>Ruusujuuri + nokkonen</span>
+            <strong>Haluan kapselin, jossa on myös nokkoslehtijauhetta.</strong>
+          </button>
+          <button class="segment" type="button" data-segment="women" role="listitem">
+            <span>Marjajauheet</span>
+            <strong>Haluan jauheen puuroon, viiliin, jogurttiin tai smoothieen.</strong>
+          </button>
+        </div>
+        <article class="recommendation" aria-live="polite">
+          <div>
+            <p class="eyebrow">Suositeltu polku</p>
+            <h3 data-segment-title>RodiStrong</h3>
+            <p data-segment-copy>
+              RodiStrong on ruusujuurijauhevalmiste: 50 gelatiinikapselia, 220 mg ruusujuurijauhetta kapselissa. Hinta verkkokaupassa 23,00 euroa.
+            </p>
+          </div>
+          <div class="recommendation-actions">
+            <button class="button primary" type="button" data-add="RodiStrong">Lisää suositus koriin</button>
+            <a class="button secondary" href="#products">Vertaile tuotteita</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section products" id="products" aria-labelledby="products-title">
+        <div class="section-heading">
+          <p class="eyebrow">Suosituimmat ja selkeät aloitustuotteet</p>
+          <h2 id="products-title">Nykyisen verkkokaupan tuotteet tiiviimmässä muodossa.</h2>
+        </div>
+        <div class="product-grid">
+          <article class="product-card featured">
+            <figure class="product-image">
+              <img src="./assets/product-rodistrong.png" alt="RodiStrong-tuotepakkaus" />
+            </figure>
+            <div class="product-meta">Ruusujuurijauhe kapseleissa</div>
+            <h3>RodiStrong</h3>
+            <p>Ravintolisä: 11 g ruusujuurijauhevalmiste, 50 gelatiinikapselia, 220 mg kapselissa.</p>
+            <div class="price">23,00 &euro;</div>
+            <button class="button primary" type="button" data-add="RodiStrong">Lisää koriin</button>
+          </article>
+          <article class="product-card">
+            <figure class="product-image">
+              <img src="./assets/product-ros-urt.png" alt="ROS-URT-tuotepakkaus" />
+            </figure>
+            <div class="product-meta">Ruusujuuri + nokkonen</div>
+            <h3>ROS-URT</h3>
+            <p>50 gelatiinikapselia. Kapselissa 210 mg ruusujuurijauhetta ja 110 mg nokkoslehtijauhetta.</p>
+            <div class="price">24,00 &euro;</div>
+            <button class="button secondary" type="button" data-add="ROS-URT">Lisää koriin</button>
+          </article>
+          <article class="product-card">
+            <figure class="product-image">
+              <img src="./assets/product-tyrnijauhe.jpg" alt="Tyrnijauhe-tuotepakkaus" />
+            </figure>
+            <div class="product-meta">Marjajauhe</div>
+            <h3>Tyrnijauhe</h3>
+            <p>100 g kuivattua, jauhettua tyrnimarjan marjalihaa, kuori- ja siemenosaa.</p>
+            <div class="price">10,00 &euro;</div>
+            <button class="button secondary" type="button" data-add="Tyrnijauhe">Lisää koriin</button>
+          </article>
+          <article class="product-card">
+            <figure class="product-image">
+              <img src="./assets/product-ruusujuurivoide.png" alt="Rhodiola rosea ruusujuurivoide" />
+            </figure>
+            <div class="product-meta">Voide</div>
+            <h3>Rhodiola rosea ruusujuurivoide</h3>
+            <p>Ruusujuuriuute kylmäpuristetussa luomu-kookosöljyssä. 40 g.</p>
+            <div class="price">17,00 &euro;</div>
+            <button class="button secondary" type="button" data-add="Rhodiola rosea ruusujuurivoide">Lisää koriin</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section proof" id="delivery" aria-labelledby="proof-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Toimitus ja maksaminen</p>
+          <h2 id="proof-title">Ostopäätöksen vieressä pitää näkyä toimitus, maksutavat ja yhteystiedot.</h2>
+        </div>
+        <div class="proof-grid">
+          <article class="info-box">
+            <h3>Toimitus</h3>
+            <p>Tilaukset toimitetaan pikkupakettina tai postipakettina 2-6 arkipäivän kuluessa. Pikkupaketti maksaa 5,90 euroa ja paketti 6,60 euroa. Yli 60 euron tilaukset toimitetaan ilman toimituskuluja.</p>
+          </article>
+          <article class="info-box">
+            <h3>Maksaminen</h3>
+            <p>Maksuvälityksen toteuttaa Paytrail. Jos asiakas ei halua käyttää verkkomaksamista, tilauksen voi tehdä yhteydenottolomakkeella tai sähköpostilla ja maksaa ennakkolaskulla.</p>
+          </article>
+          <article class="info-box">
+            <h3>Yhteystiedot</h3>
+            <p>Mesacos Oy, Rentukkatie 17 B3, 90580 Oulu. Puhelin 044 55 66 821. Sähköposti info@mesacos.fi. Y-tunnus 2540714-9.</p>
+          </article>
+          <article class="info-box">
+            <h3>Uutiskirje</h3>
+            <p>Nykyinen verkkokauppa tarjoaa uutiskirjeen tilauksen sähköpostiosoitteella. Testiversiossa se toimii liidipisteenä ennen varsinaista ostoa.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section lead" id="lead" aria-labelledby="lead-title">
+        <div class="lead-copy">
+          <p class="eyebrow">Uutiskirje ja ostamista tukeva sisältö</p>
+          <h2 id="lead-title">Tilaa lyhyt opas ruusujuurituotteiden valintaan.</h2>
+          <p>
+            Nykyinen verkkokauppa kerää uutiskirjeen tilaajia. Testiversiossa sama kohta kertoo selkeämmin, mitä asiakas saa: apua RodiStrongin, Rodisanan, ROS-URTin, marjajauheiden ja voiteiden vertailuun.
+          </p>
+        </div>
+        <form class="lead-form" data-lead-form>
+          <label>
+            Nimi
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Sähköposti
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <button class="button primary" type="submit">Tilaa testiopas</button>
+          <p class="form-message" data-form-message></p>
+        </form>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" aria-label="Ostoskori" aria-hidden="true" data-cart>
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <h2>Testikori</h2>
+          <button class="close-button" type="button" aria-label="Sulje ostoskori" data-close-cart>&times;</button>
+        </div>
+        <div class="cart-items" data-cart-items>
+          <p class="empty">Kori on tyhjä.</p>
+        </div>
+        <form class="mini-checkout" data-checkout>
+          <label>
+            Sähköposti testitilausta varten
+            <input type="email" name="checkoutEmail" required />
+          </label>
+          <button class="button primary wide" type="submit">Tee testitilaus</button>
+          <p class="form-message" data-checkout-message></p>
+        </form>
+      </div>
+    </aside>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

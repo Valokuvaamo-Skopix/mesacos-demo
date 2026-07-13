@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Löydä oma ruusujuurituotteesi — Mesacos (opas-prototyyppi)</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="build-flag" role="note">
+      Claude-prototyyppi #2 (opas/quiz-versio) vertailua varten — ei live-sivusto. Katso <a href="./SOURCES.md">SOURCES.md</a>.
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#top">
+        <img src="./assets/mesacos-logo-transparent.png" alt="Mesacos Oy" />
+      </a>
+      <a class="link-quiet" href="https://verkkokauppa.mesacos.fi/" target="_blank" rel="noopener">Suoraan verkkokauppaan →</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">30 sekunnin opas</p>
+        <h1>Kolme kysymystä. Yksi sinulle sopiva ruusujuurituote.</h1>
+        <p class="lede">
+          Mesacos viljelee ruusujuurta Pohjois-Pohjanmaalla ja valmistaa siitä kapseleita, marjajauheita ja voiteita. Valikoima on laaja — tämä opas vie suoraan sinulle sopivaan tuotteeseen.
+        </p>
+        <a class="button primary large" href="#opas" data-start>Aloita opas</a>
+        <a class="link-quiet small" href="#valikoima">tai selaa koko valikoimaa suoraan</a>
+      </section>
+
+      <section class="quiz" id="opas" aria-label="Tuoteopas">
+        <div class="quiz-progress" aria-hidden="true">
+          <span class="dot is-active" data-dot="1"></span>
+          <span class="dot" data-dot="2"></span>
+          <span class="dot" data-dot="3"></span>
+        </div>
+
+        <div class="quiz-step is-active" data-step="1">
+          <p class="eyebrow">1/3 — Kenelle etsit tuotetta?</p>
+          <h2>Mikä kuvaa tilannettasi parhaiten?</h2>
+          <div class="option-grid">
+            <button class="option-card" type="button" data-segment="shift">
+              <strong>Teen vuorotyötä</strong>
+              <span>Epäsäännöllinen rytmi kuormittaa jaksamista</span>
+            </button>
+            <button class="option-card" type="button" data-segment="student">
+              <strong>Opiskelen</strong>
+              <span>Kaipaan tukea pitkäjänteiseen arkeen</span>
+            </button>
+            <button class="option-card" type="button" data-segment="senior">
+              <strong>Olen ikäihminen</strong>
+              <span>Etsin lempeää, arkeen sopivaa tuotetta</span>
+            </button>
+            <button class="option-card" type="button" data-segment="women">
+              <strong>Olen vaihdevuosi-iässä</strong>
+              <span>Kiinnostaa ihonhoito ja päivittäinen ravinto</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="quiz-step" data-step="2">
+          <p class="eyebrow">2/3 — Muoto</p>
+          <h2 data-step2-title>Missä muodossa haluat käyttää tuotetta?</h2>
+          <div class="option-grid" data-step2-options></div>
+          <button class="link-quiet" type="button" data-back="1">← Takaisin</button>
+        </div>
+
+        <div class="quiz-step" data-step="3">
+          <p class="eyebrow">3/3 — Suositus</p>
+          <article class="result-card">
+            <img data-result-image src="" alt="" />
+            <div class="result-copy">
+              <h2 data-result-title></h2>
+              <p data-result-body></p>
+              <div class="result-foot">
+                <span class="price" data-result-price></span>
+                <a class="button primary" data-result-link href="#" target="_blank" rel="noopener">Osta nyt</a>
+              </div>
+            </div>
+          </article>
+          <div class="result-proof">
+            <p class="placeholder-flag">
+              ESIMERKKI — ei oikeita asiakaspalautteita vielä kerätty.
+            </p>
+            <blockquote data-result-quote>
+              <p>"Esimerkkiteksti asiakaskokemuksesta liittyen tähän tuotteeseen."</p>
+              <cite>Esimerkkiasiakas — placeholder</cite>
+            </blockquote>
+          </div>
+          <button class="link-quiet" type="button" data-restart>← Aloita alusta</button>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Luottamustiedot">
+        <div>
+          <strong>Kotimainen viljely</strong>
+          <span>Pohjois-Pohjanmaa</span>
+        </div>
+        <div>
+          <strong>Ei laktoosia, ei viljaa</strong>
+          <span>Kokojuurijauhe</span>
+        </div>
+        <div>
+          <strong>Toimitus 2–6 arkipäivää</strong>
+          <span>Ilmainen yli 60 €</span>
+        </div>
+        <div>
+          <strong>Paytrail</strong>
+          <span>Myös korttimaksut</span>
+        </div>
+        <div>
+          <strong>Tietosuoja</strong>
+          <span><a href="https://verkkokauppa.mesacos.fi/privacy" target="_blank" rel="noopener">Tietosuojaseloste</a></span>
+        </div>
+      </section>
+
+      <section class="section catalog" id="valikoima" aria-labelledby="catalog-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Et halunnut opasta?</p>
+          <h2 id="catalog-title">Koko valikoima yhdellä silmäyksellä.</h2>
+        </div>
+        <ul class="catalog-list">
+          <li><span>RodiStrong</span><span class="price">23,00 €</span><a href="https://verkkokauppa.mesacos.fi/product/4/rodistrong" target="_blank" rel="noopener">Osta →</a></li>
+          <li><span>Rodisana</span><span class="price">23,00 €</span><a href="https://verkkokauppa.mesacos.fi/product/1/rodisana" target="_blank" rel="noopener">Osta →</a></li>
+          <li><span>ROS-URT</span><span class="price">24,00 €</span><a href="https://verkkokauppa.mesacos.fi/product/9/ros-urt" target="_blank" rel="noopener">Osta →</a></li>
+          <li><span>Tyrnijauhe</span><span class="price">10,00 €</span><a href="https://verkkokauppa.mesacos.fi/product/12/tyrnijauhe" target="_blank" rel="noopener">Osta →</a></li>
+          <li><span>Karpalojauhe</span><span class="price">10,00 €</span><a href="https://verkkokauppa.mesacos.fi/product/15/karpalojauhe" target="_blank" rel="noopener">Osta →</a></li>
+          <li><span>Rhodiola rosea ruusujuurivoide</span><span class="price">17,00 €</span><a href="https://verkkokauppa.mesacos.fi/product/8/rhodiola-rosea-ruusujuurivoide" target="_blank" rel="noopener">Osta →</a></li>
+        </ul>
+      </section>
+
+      <section class="section proof">
+        <div class="proof-grid">
+          <article class="info-box">
+            <h3>Toimitus</h3>
+            <p>Pikkupaketti tai postipaketti 2–6 arkipäivässä. Ilmainen toimitus yli 60 € tilauksiin.</p>
+          </article>
+          <article class="info-box">
+            <h3>Maksaminen</h3>
+            <p>Paytrail, myös korttimaksut. Vaihtoehtona yhteydenottolomake tai ennakkolasku.</p>
+          </article>
+          <article class="info-box">
+            <h3>Yhteystiedot</h3>
+            <p>Mesacos Oy, Rentukkatie 17 B3, 90580 Oulu. info@mesacos.fi. Y-tunnus 2540714-9.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© Mesacos Oy — opas-prototyyppi, ei live-sivusto</span>
+      <a href="https://verkkokauppa.mesacos.fi/" target="_blank" rel="noopener">verkkokauppa.mesacos.fi</a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
