@@ -52,6 +52,15 @@ button {
   text-decoration: underline;
 }
 
+.event-banner {
+  background: var(--accent-light);
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 12px clamp(20px, 5vw, 24px);
+}
+
 .topbar {
   display: flex;
   align-items: center;
@@ -153,6 +162,14 @@ h3 {
   padding: 0 36px;
   font-size: 1.05rem;
   margin-top: 34px;
+}
+
+.button.secondary {
+  background: var(--dark);
+}
+
+.button.secondary:hover {
+  background: #000;
 }
 
 .quiz {
@@ -261,9 +278,81 @@ h3 {
   color: var(--dark);
 }
 
+.cross-sell-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 18px;
+  padding: 16px 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.cross-sell-card img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px;
+  border: 1px solid var(--line);
+}
+
+.cross-sell-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cross-sell-label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
 .result-proof {
   margin-top: 26px;
   text-align: left;
+}
+
+.reminder-form {
+  margin-top: 18px;
+  padding: 18px 20px;
+  background: var(--panel);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.reminder-form label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.reminder-row {
+  display: flex;
+  gap: 10px;
+}
+
+.reminder-row input {
+  flex: 1;
+  padding: 0 14px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.form-message {
+  margin: 10px 0 0;
+  font-size: 0.86rem;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .placeholder-flag {
@@ -446,5 +535,13 @@ blockquote cite {
 
   .catalog-list li .price {
     display: none;
+  }
+
+  .cross-sell-card {
+    flex-wrap: wrap;
+  }
+
+  .reminder-row {
+    flex-direction: column;
   }
 }

@@ -6,6 +6,7 @@ const products = {
     image: "./assets/product-rodistrong.png",
     link: "https://verkkokauppa.mesacos.fi/product/4/rodistrong",
     quote: "\"Esimerkkiteksti: käytän RodiStrongia vuorotyön rinnalla useamman kuukauden ajan.\"",
+    crossSell: "tyrni",
   },
   rodisana: {
     title: "Rodisana",
@@ -14,6 +15,7 @@ const products = {
     image: "./assets/product-rodisana.jpg",
     link: "https://verkkokauppa.mesacos.fi/product/1/rodisana",
     quote: "\"Esimerkkiteksti: Rodisana sopii hyvin pitkäjänteiseen, tasaiseen käyttöön.\"",
+    crossSell: "tyrni",
   },
   rosurt: {
     title: "ROS-URT",
@@ -22,6 +24,7 @@ const products = {
     image: "./assets/product-ros-urt.png",
     link: "https://verkkokauppa.mesacos.fi/product/9/ros-urt",
     quote: "\"Esimerkkiteksti: ROS-URT on osa arkirutiinia.\"",
+    crossSell: "tyrni",
   },
   voide: {
     title: "Rhodiola rosea ruusujuurivoide",
@@ -30,6 +33,7 @@ const products = {
     image: "./assets/product-ruusujuurivoide.png",
     link: "https://verkkokauppa.mesacos.fi/product/8/rhodiola-rosea-ruusujuurivoide",
     quote: "\"Esimerkkiteksti: voide on osa päivittäistä ihonhoitorutiinia.\"",
+    crossSell: "rodisana",
   },
   tyrni: {
     title: "Tyrnijauhe",
@@ -38,6 +42,7 @@ const products = {
     image: "./assets/product-tyrnijauhe.jpg",
     link: "https://verkkokauppa.mesacos.fi/product/12/tyrnijauhe",
     quote: "\"Esimerkkiteksti: lisään tyrnijauhetta aamupuuroon päivittäin.\"",
+    crossSell: "rodisana",
   },
   karpalo: {
     title: "Karpalojauhe",
@@ -46,6 +51,7 @@ const products = {
     image: "./assets/product-karpalojauhe.jpg",
     link: "https://verkkokauppa.mesacos.fi/product/15/karpalojauhe",
     quote: "\"Esimerkkiteksti: karpalojauhe smoothiessa on tullut osaksi viikkorutiinia.\"",
+    crossSell: "rodisana",
   },
 };
 
@@ -102,6 +108,14 @@ function showResult(productKey) {
   document.querySelector("[data-result-link]").href = data.link;
   document.querySelector("[data-result-link]").textContent = `Osta ${data.title}`;
   document.querySelector("[data-result-quote] p").textContent = data.quote;
+
+  const crossSell = products[data.crossSell];
+  document.querySelector("[data-cross-sell-image]").src = crossSell.image;
+  document.querySelector("[data-cross-sell-image]").alt = `${crossSell.title}-tuotepakkaus`;
+  document.querySelector("[data-cross-sell-title]").textContent = crossSell.title;
+  document.querySelector("[data-cross-sell-price]").textContent = crossSell.price;
+  document.querySelector("[data-cross-sell-link]").href = crossSell.link;
+
   goToStep(3);
 }
 
@@ -124,3 +138,12 @@ document.querySelectorAll("[data-segment]").forEach((button) => {
 
 document.querySelector("[data-back='1']").addEventListener("click", () => goToStep(1));
 document.querySelector("[data-restart]").addEventListener("click", () => goToStep(1));
+
+document.querySelector("[data-reminder-form]").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const email = new FormData(form).get("email");
+  const message = document.querySelector("[data-reminder-message]");
+  message.textContent = `Kiitos! Muistutus lähetettäisiin osoitteeseen ${email} n. 60 päivän kuluttua. (Prototyyppi — ei oikeaa lähetystä.)`;
+  form.reset();
+});

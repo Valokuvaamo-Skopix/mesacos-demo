@@ -18,6 +18,10 @@
       <a class="link-quiet" href="https://verkkokauppa.mesacos.fi/" target="_blank" rel="noopener">Suoraan verkkokauppaan →</a>
     </header>
 
+    <div class="event-banner">
+      Tavattiinko sinut messuilla tai torilla? Löydä sama tuote alta ja tilaa jatkossa suoraan kotiin.
+    </div>
+
     <main id="top">
       <section class="hero">
         <p class="eyebrow">30 sekunnin opas</p>
@@ -79,6 +83,16 @@
               </div>
             </div>
           </article>
+
+          <a class="cross-sell-card" data-cross-sell-link href="#" target="_blank" rel="noopener">
+            <img data-cross-sell-image src="" alt="" />
+            <span class="cross-sell-copy">
+              <span class="cross-sell-label">Sopii hyvin lisäksi</span>
+              <span data-cross-sell-title></span>
+            </span>
+            <span class="price" data-cross-sell-price></span>
+          </a>
+
           <div class="result-proof">
             <p class="placeholder-flag">
               ESIMERKKI — ei oikeita asiakaspalautteita vielä kerätty.
@@ -88,6 +102,16 @@
               <cite>Esimerkkiasiakas — placeholder</cite>
             </blockquote>
           </div>
+
+          <form class="reminder-form" data-reminder-form>
+            <label for="reminder-email">Muistutus n. 60 päivän kuluttua, kun tuote alkaa loppua</label>
+            <div class="reminder-row">
+              <input id="reminder-email" type="email" name="email" placeholder="Sähköpostisi" required data-reminder-email />
+              <button class="button secondary" type="submit">Muistuta minua</button>
+            </div>
+            <p class="form-message" data-reminder-message></p>
+          </form>
+
           <button class="link-quiet" type="button" data-restart>← Aloita alusta</button>
         </div>
       </section>
