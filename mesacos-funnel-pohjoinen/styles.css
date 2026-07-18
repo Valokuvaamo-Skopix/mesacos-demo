@@ -324,13 +324,32 @@ p { margin: 0 0 1em; color: var(--cream-dim); }
   .proto-banner { font-size: 0.68rem; padding: 8px 12px; line-height: 1.4; }
 
   .header-inner { padding-top: 12px; padding-bottom: 12px; gap: 10px; }
-  .brand img { height: 24px; }
+  .brand img { height: 34px; }
   .header-inner .button.ghost { display: none; }
 
-  .hero { min-height: 88vh; align-items: flex-end; }
-  .hero-bg { object-position: 68% 40%; }
-  .hero-content { padding-top: 40px; padding-bottom: 40px; max-width: 100%; }
-  .hero h1 { font-size: clamp(1.6rem, 8.2vw, 3rem); }
+  /* Mobile hero: stop cropping the landscape photo into an illegible
+     full-bleed sliver behind text. Show it as its own framed image block
+     (properly cropped on the hand+flower), then run text below on solid
+     background — legible, and the photo actually reads as a photo. */
+  .hero {
+    min-height: 0;
+    display: block;
+    overflow: visible;
+  }
+  .hero-bg {
+    position: static;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-position: 46% 68%;
+  }
+  .hero-scrim { display: none; }
+  .hero-content {
+    position: static;
+    max-width: 100%;
+    padding: 28px 0 36px;
+  }
+  .hero h1 { font-size: clamp(1.9rem, 9vw, 3rem); }
   .hero-lede { font-size: 0.98rem; max-width: 40ch; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .button { width: 100%; }
